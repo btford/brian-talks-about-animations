@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS App</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body ng-app="myNotifications" ng-controller="NotificationsCtrl" class="container">
+
+  <div class="notifications">
+    <div class="notification well" ng-repeat="alert in alerts">{{alert.text}}</div>
+  </div>
+
+
+  <h1>Notifications Demo</h1>
+
+  <form ng-submit="addAlert()">
+    <input ng-model="newAlert">
+    <input type="submit" value="Add">
+  </form>
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

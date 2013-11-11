@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS App</title>
+
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body ng-app="mySidebar" ng-swipe-left="show=true" ng-swipe-right="show=false">
+
+
+  <nav class="sidebar" ng-if="show">
+    <h2>Sidebar</h2>
+    <ul>
+      <li>Option A</li>
+      <li>Option B</li>
+      <li>Option C</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Slide --&gt;</h1>
+  </div>
+
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-touch/angular-touch.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
